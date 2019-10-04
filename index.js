@@ -5,7 +5,7 @@ const projectsRouter = require('./routers/projectsRouter.js');
 
 server.use(express.json());
 
-server.use('/projects/:id/actions', actionsRouter)
+server.use('/actions', actionsRouter)
 server.use('/projects', projectsRouter)
 
 const port = 7979
