@@ -26,13 +26,26 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+1.  Express provides a way to break our application into different request handlers for each URL + HTTP method combination.  This is called Routing. 
+2.  Express is a web application framework for Node.js.
+
+
+
 - [ ] Describe Middleware?
+
+Middleware is a type of software that is part of the building process of the application.  It checks whatever process is being ran and it will either allow the process to continue to run, stop the process, or change the process in some way and then continue to allow it to run. 
 
 - [ ] Describe a Resource?
 
+Everything is a resource in a RESTful API. Each resource is accessible via a unique URI. Resources can be represented in multiple ways.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+An API can return a status request to the user.  A successful status request will usually be either a 200, 201, 204, etc. If the request was unsuccessful an API can respond with a 500, or a 400, 401, 404, etc.
+
 - [ ] How can we partition our application into sub-applications?
+
+We can partition our application into sub applications by using the Router from express.  Express Routers allow us to divide up our application so that it becomes easier to maintain and more modular.
 
 ## Project Setup
 
