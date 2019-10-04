@@ -1,5 +1,6 @@
 const express = require('express');
 const projectModel = require('../data/helpers/projectModel.js');
+const actionModel = require('../data/helpers/actionModel.js');
 
 const router = express.Router();
 
@@ -60,6 +61,18 @@ router.get('/:id', (req, res)=>{
     })
     .catch(error=>{
         res.status(500).json({ errorMessage: "Actions from project could not be returned."})
+    })
+})
+
+router.post('/:id/actions', (req, res)=>{
+    const newAction = req.body;
+    actionModel
+    .insert(newAction)
+    .then(action=>{
+        res.status(201).json(action)
+    })
+    .catch(error=>{
+    res.status(500).json({ newMessage: "This action could not be posted."})
     })
 })
 module.exports = router;
